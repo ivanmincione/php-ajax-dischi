@@ -97,16 +97,16 @@ $(document).ready(function () {
   var source = $("#box-template").html();
   var template = Handlebars.compile(source);
   $.ajax({
-    url: "db.php",
+    url: "db-ajax.php",
     method: 'GET',
     success: function success(item) {
       for (var i = 0; i < item.length; i++) {
         var context = {
-          "poster": item[i].poster,
-          "title": item[i].title,
-          "author": item[i].author,
-          "genre": item[i].genre,
-          "year": item[i].year
+          'poster': item[i].poster,
+          'title': item[i].title,
+          'author': item[i].author,
+          'genre': item[i].genre,
+          'year': item[i].year
         };
         var html = template(context);
         $(".box-card").append(html);
@@ -114,7 +114,7 @@ $(document).ready(function () {
 
     },
     error: function error() {
-      alert("Si è verificato un errore");
+      console.log("Si è verificato un errore");
     } //end ajax
 
   }); // end ready
