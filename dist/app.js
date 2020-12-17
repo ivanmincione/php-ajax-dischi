@@ -93,7 +93,10 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+$(document).ready(function () {
+  var source = $("#box-template").html();
+  var template = Handlebars.compile(source); // end ready
+});
 
 /***/ }),
 
