@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+main {
+  padding-top: 40px;
+  background-color: #969696;
+}
+
+p {
+  padding: 10px 0;
+}
+
+header {
+  background-color: #505050;
+  height: 80px;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.box-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  max-width: 250px;
+  background-color: #1d1d1d;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.card img {
+  width: 100%;
+}
+

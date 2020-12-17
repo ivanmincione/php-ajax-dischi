@@ -1,0 +1,20 @@
+.box-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+
+.card{
+    max-width: 250px;
+    background-color: $bgCard;
+    text-align: center;
+    padding: $spacing;
+    border-radius: 10px;
+    margin: $spacing;
+
+    img{
+        width: 100%;
+    }
+}

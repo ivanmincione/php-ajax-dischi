@@ -1,0 +1,12 @@
+header{
+    background-color: $bgHeader;
+    height: 80px;
+    padding: $spacing;
+
+    h1{
+        font-size: $fontSize * 2;
+        text-align: center;
+        vertical-align: middle;
+        color: $colorPrimary;
+    }
+}
