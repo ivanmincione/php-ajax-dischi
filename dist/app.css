@@ -28,7 +28,6 @@ header {
   height: 80px;
   padding: 20px;
 }
-
 header h1 {
   font-size: 36px;
   text-align: center;
@@ -50,8 +49,6 @@ header h1 {
   border-radius: 10px;
   margin: 20px;
 }
-
 .card img {
   width: 100%;
 }
-
