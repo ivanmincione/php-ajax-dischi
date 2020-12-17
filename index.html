@@ -7,6 +7,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
         <!-- Include Handlebars from a CDN -->
         <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <!-- JQUERY -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
         <!-- STYLE -->
         <link rel="stylesheet" href="dist/app.css">
         <title>AJAX DISCHI</title>
@@ -25,13 +27,15 @@
 
         <script id="box-template" type="text/x-handlebars-template">
             <div class="card">
-                <img src=" " alt="">
-                <p>  </p>
-                <p>  </p>
-                <p>  </p>
-                <p>  </p>
+                <img src=" {{poster}} " alt="{{title}}">
+                <p> {{title}} </p>
+                <p> {{author}} </p>
+                <p> {{genre}} </p>
+                <p> {{year}} </p>
             </div>
         </script>
+
+
         <script src="dist/app.js" charset="utf-8"></script>
     </body>
 </html>
