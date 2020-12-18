@@ -22,3 +22,12 @@ main{
 p{
     padding: $spacing / 2 0;
 }
+
+.filter{
+    display: flex;
+    justify-content: center;
+}
+
+#filter-genre{
+    border-radius: 10px;
+}

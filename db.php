@@ -1,4 +1,5 @@
 <?php
+
 $dischi = [
     [
         'poster' => 'https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg',
@@ -72,5 +73,43 @@ $dischi = [
     ]
 ];
 
-​
+//per la versione in PHP creo un array per i generi
+$genres = [];
+foreach ($dischi as $disco) {
+    // recupero il genere del disco corrente
+    $genre = $disco['genre'];
+    if(!in_array($genre, $genres)){
+        $genres[] = $genre;
+    }
+}
+
+
+
+// per avere un unico db per entrambe le versioni
+if ( !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' ) {
+
+    // se esiste leggo il parametro passato in GET
+    if(!empty($_GET) && !empty($_GET["genre"])) {
+        $genre = $_GET["genre"];
+
+        //array per contenere i risultati filtrati
+        $dbFiltered = [];
+
+        //ciclo forEach in base al genere selezionato
+        foreach ($dischi as $disco) {
+            if($disco["genre"] == $genre) {
+
+                $dbFiltered[] = $disco;
+            }
+            //altrimente se non è verificata la if lo scarto
+        }
+    } else {
+        //se il genere è vuoto o non viene richiesto nessun filtro assegno al dbFiltered il valore del db iniziale
+        $dbFiltered = $dischi;
+    }
+
+    // dbFiltered è definito e contiene i dati
+    header('Content-Type: application/json');
+    echo json_encode($dbFiltered);
+}
 ?>

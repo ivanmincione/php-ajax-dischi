@@ -10,10 +10,10 @@
         <!-- Include Handlebars from a CDN -->
         <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
         <!-- STYLE -->
-        <link rel="stylesheet" href="dist/app.css">
+        <link rel="stylesheet" href="../dist/app.css">
         <title>AJAX DISCHI</title>
     </head>
-    <body>
+    <body id="version-ajax">
 
         <header>
             <h1>AJAX DISCHI</h1>
@@ -21,11 +21,15 @@
 
         <main>
             <div class="container">
+                <div class="filter">
+                    <select id="filter-genre">
+                        <option value="">-- ALL --</option>
+                    </select>
+                </div>
                 <div class="box-card">
 
                 </div>
             </div>
-
         </main>
 
         <script id="box-template" type="text/x-handlebars-template">
@@ -37,6 +41,6 @@
                 <p>{{ year }}</p>
             </div>
         </script>
-        <script src="dist/app.js" charset="utf-8"></script>
+        <script src="../dist/app.js" charset="utf-8"></script>
     </body>
 </html>
